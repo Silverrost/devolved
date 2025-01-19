@@ -1,5 +1,6 @@
 var Webflow = Webflow || [];
 Webflow.push(function() {
+    // Fix dropdowns
 	var drpdwns = document.querySelectorAll(".w-dropdown");
     for (var i = 0; i < drpdwns.length; i++) {
         var drpdwn = drpdwns[i]
@@ -7,17 +8,18 @@ Webflow.push(function() {
             drpdwn.classList.add("w--current");
 	    }
     }
-    var oldW = jQuery(window).width();
-  
-    // resizing:
+
+    // reload on w-resized:
+    var oldW = $(window).width();
+    console.log("oldW "+oldW);
 	$(window).on('resize', function () {
 		if (window.resFin) clearTimeout(window.resFin);
-    // resize end:
+        // resize end:
 		window.resFin = setTimeout(function(){
-			var newW = jQuery(window).width();
+			var newW = $(window).width();
 			// W changed:
 			if(oldW!==newW){	
-        // false to get page from cache
+                // false to get page from cache
 				this.location.reload(false); 
 			}
 		}, 500);
