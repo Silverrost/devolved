@@ -1,6 +1,3 @@
-//const elem = document.getElementById("prev-next-list");
-//const currentP = elem.querySelector("a[aria-current='page']");
- 
 var Webflow = Webflow || [];
 Webflow.push(function () {
 

@@ -1,4 +1,3 @@
-//import { Application } from '@splinetool/runtime';
 import { Application } from 'https://unpkg.com/@splinetool/runtime@latest/build/runtime.js';
 
 var w = window.innerWidth;
