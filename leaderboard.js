@@ -2,7 +2,6 @@ window.FinsweetAttributes ||= [];
 window.FinsweetAttributes.push([
   'list',
     (listInstances) => {
-      console.log('cmsload Successfully loaded!');
       listInstances.forEach((listInstance) => {
 		var startAt = parseInt(listInstance.listElement.getAttribute('list-startsat'), 10);
 		var perPage = parseInt(listInstance.listElement.getAttribute('list-perpage'), 10);
